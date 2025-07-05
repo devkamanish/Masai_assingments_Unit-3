@@ -4,3 +4,10 @@
    And apply() is also same as call() but it takes arguments as in the form of array.
 
    And bind()-> It does not invoke function immediately it creates a new function that always uses the specified this.
+
+   Shallow copy -> the spread operator only does a shallow copy. It copies details by reference, not by value.So It’s useful when your object is flat (no nested objects).   
+
+
+
+  
+   

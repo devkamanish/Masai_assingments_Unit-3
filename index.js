@@ -1,40 +1,80 @@
 
-
-
-
-
-// function greet(time,signn){
-//   console.log(this.user, time,signn);
+ // upload , read, analyze and compile
+// function uploadingFile(callback){
+//   setTimeout(() => {
+//     console.log("File is uploaded");
+//     callback()
+//   }, 1000);
 // }
 
-// let obj = {
-//   user : "raju"
+// function readingFile(callback){
+//   setTimeout(() => {
+//     console.log("Reading file");
+//     callback();
+//   }, 1000);
 // }
 
-// let obj2 = {
-//   user : "manuu"
+// function analyze(callback){
+//   setTimeout(()=>{
+//     console.log("Analyzing file");
+//     callback();
+//   })
 // }
-// let obj3 = {
-//   user : "cheten"
+
+// function Compile(){
+//   setTimeout(() => {
+//     console.log("Compiling file")
+//   }, 1000);
 // }
 
 
-// greet.call(obj,"good morning","!!")
-// greet.apply(obj,['good morning',"!!"])
+// uploadingFile(()=>{
+//   readingFile(()=>{
+//   analyze(()=>{
+//     Compile()
+//   })
+//   })
+// })
 
 
 
+// uploadingFile();
+// readingFile();
+// analyze();
+// Compile();
 
 
-console.log("Start");
 
-setTimeout(() => {
-  console.log("Task from setTimeout");
-}, 2000);
+function uploadingFile(callback){
+ return new Promise((res,rej)=>{
+  setTimeout(() => {
+     console.log("Uploading file");
+     res()
+  }, 1000);
+ })
+}
 
-Promise.resolve().then(() => {
-  console.log("Task from Promise");
-});
+function readingFile(callback){
+  return new Promise((res,rej)=>{
+    setTimeout(() => {
+      console.log("Reading file")
+      res()
+    }, 1000);
+  })
+}
 
-console.log("End");
+function analyze(callback){
+  return new Promise((res,rej)=>{
+ setTimeout(()=>{
+    console.log("Analyzing file");
+    res()
+  })
+  })
+ 
+}
 
+function Compile(){
+  setTimeout(() => {
+    console.log("File is comple")
+  }, 1000);
+}
