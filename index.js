@@ -1,80 +1,12 @@
-
- // upload , read, analyze and compile
-// function uploadingFile(callback){
-//   setTimeout(() => {
-//     console.log("File is uploaded");
-//     callback()
-//   }, 1000);
-// }
-
-// function readingFile(callback){
-//   setTimeout(() => {
-//     console.log("Reading file");
-//     callback();
-//   }, 1000);
-// }
-
-// function analyze(callback){
-//   setTimeout(()=>{
-//     console.log("Analyzing file");
-//     callback();
-//   })
-// }
-
-// function Compile(){
-//   setTimeout(() => {
-//     console.log("Compiling file")
-//   }, 1000);
-// }
-
-
-// uploadingFile(()=>{
-//   readingFile(()=>{
-//   analyze(()=>{
-//     Compile()
-//   })
-//   })
-// })
-
-
-
-// uploadingFile();
-// readingFile();
-// analyze();
-// Compile();
-
-
-
-function uploadingFile(callback){
- return new Promise((res,rej)=>{
-  setTimeout(() => {
-     console.log("Uploading file");
-     res()
-  }, 1000);
- })
-}
-
-function readingFile(callback){
-  return new Promise((res,rej)=>{
-    setTimeout(() => {
-      console.log("Reading file")
-      res()
-    }, 1000);
-  })
-}
-
-function analyze(callback){
-  return new Promise((res,rej)=>{
- setTimeout(()=>{
-    console.log("Analyzing file");
-    res()
-  })
-  })
  
-}
+//  let userPrompt = prompt("What do you wanna shop ? ")
+ 
 
-function Compile(){
-  setTimeout(() => {
-    console.log("File is comple")
-  }, 1000);
-}
+ 
+fetch("https://fakestoreapi.com/products")
+.then(res=>res.json())
+.then(res=>{
+  let cheap = res.filter(item=> item.price<20);
+  console.log(cheap.length)
+})
+

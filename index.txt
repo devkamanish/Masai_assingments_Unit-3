@@ -1,2 +1,8 @@
   Why we need promises > 
 Because setTimeout can only schedule tasks with fixed delays, it doesn’t inherently know when the async task actually finishes.
+
+
+
+ fetch -> fetch() request returns a Promise that resolves to a Response object — not directly the data you want. So to get the data we use 
+          .json() to get the data, it basically returns a promise that resolves to a js object from a regular response object(readableStream).
+          
