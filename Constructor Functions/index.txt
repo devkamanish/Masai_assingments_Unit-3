@@ -1,0 +1,15 @@
+
+
+How to create objects 
+
+Object Literals
+Factory functions
+Constructor functions (Which implicitly creates and return an object using this keyword).
+Class constructor 
+
+
+Static methods -> These methods are only available for the constructor function not for its instances.
+
+
+-> When we create a non-primitive datatype it is created in different references even if the values of two objects are same but where they are stored is not same.
+ But in case of class constructors whenever the methods are created  it is directly created in prototype and that same prototype is shared to all the instances. 

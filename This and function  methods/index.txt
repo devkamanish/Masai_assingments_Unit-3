@@ -1,5 +1,5 @@
   In JavaScript, the call() method is a powerful tool used to invoke
-   a function with a specified this value and arguments provided individuall
+   a function with a specified this value and arguments provided individual.
 
    And apply() is also same as call() but it takes arguments as in the form of array.
 
@@ -7,7 +7,7 @@
 
    Shallow copy -> the spread operator only does a shallow copy. It copies details by reference, not by value.So It’s useful when your object is flat (no nested objects).   
 
-
+ 
 
   
    
