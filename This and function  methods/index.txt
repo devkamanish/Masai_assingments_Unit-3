@@ -1,9 +1,9 @@
   In JavaScript, the call() method is a powerful tool used to invoke
-   a function with a specified this value and arguments provided individual.
+   a function  and explicitly sets the value of this and we can also pass arguments to the function individually.
 
    And apply() is also same as call() but it takes arguments as in the form of array.
 
-   And bind()-> It does not invoke function immediately it creates a new function that always uses the specified this.
+   And bind()-> It does not invoke function immediately it creates a new function that sets the value of 'this' permanently and the new function can be invoked later with or without any additional arguments.
 
    Shallow copy -> the spread operator only does a shallow copy. It copies details by reference, not by value.So It’s useful when your object is flat (no nested objects).   
 

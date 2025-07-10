@@ -23,11 +23,12 @@ function Book(title , author){
    title : title,
    author : author,
    details : function(){
-    console.log(`Title: ${this.title}, Author: ${this.author}`)
+    console.log(`Title: ${title}, Author: ${author}`)
    }
-
+   
   }
 }
+
 
 const library = createLibrary();
 
