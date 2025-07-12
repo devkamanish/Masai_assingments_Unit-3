@@ -17,7 +17,7 @@ function Dog(){                 // Here we are inheriting from Animal function
 
 
 
-Dog.prototype = Object.create(Animal.prototype) ;
+Dog.prototype = Object.create(Animal.prototype) ;    
 
 Dog.prototype.sound = function(){   //  Overriding the sound method in Dog.prototype
     console.log("Bark")
@@ -25,4 +25,8 @@ Dog.prototype.sound = function(){   //  Overriding the sound method in Dog.proto
 
 const myDog = new Dog();    // creating an instance of Dog
 myDog.sound()
+
+
+
+
 

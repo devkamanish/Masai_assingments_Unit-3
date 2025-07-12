@@ -1,0 +1,4 @@
+
+
+When we create objects with class constructor then the methods which are defined after constructor are bydefault created in prototype.
+Super ->  This method basically have the entrie access to the parent constructor.
