@@ -1,20 +1,16 @@
 
-function reminder(){
 
-  const intervalId= setInterval(() => {
-    console.log("Staty focused")
-  }, 10000);
+const parent ={
+   greet : function(){
+      console.log(`Hello from parent`)
 
-  setTimeout(() => {
-  clearInterval(intervalId)
-  console.log("Reminder stopped is stopped after 30 seconds")
-}, 30000);
+   }
+}
+
+const child = Object.create(parent) ////  
+child.greet = function(){
+   console.log(`hello from child`)
 }
 
 
-reminder()
-
-
-
-
-
+child.greet()
